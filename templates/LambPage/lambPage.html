@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Do you care?</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+    <script src="js/lamb/script.js"></script>
+    <script src="js/lamb/three.js"></script>
+    <script src="js/lamb/Detector.js"></script>
+    <script src="js/lamb/OrbitControls.js"></script>
+    <script src="js/lamb/OBJLoader.js"></script>
+    <script src="js/lamb/MTLLoader.js"></script>
+    <script src="js/lamb/quiz.js"></script>
+    <script src="js/lamb/render3d.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+  </head>
+  <body>
+     <div id="main-body">
+        <div id="tite">Lamb!</div>
+        <div id="toggle-menu">        
+          <div id="menu">
+            <div id="quiz" onclick="clickHandler(this.id); "><div id="TakeQuizText">Take the quiz!</div></div>
+            <div id="facts" onclick="clickHandler(this.id);"><div id="GetFactsText">Get some facts!</div></div>
+          </div>
+          <div id="render"></div>
+        </div>
+        <div id="toggle-quiz">
+              <div id="quiz-spacer"></div>
+                <div id="Question-1">
+                  <div id="question-list-div">
+                    <h2>How many times times a week do you eat chicken?</h2>
+                    <ul>
+                      <li><a onclick="submitReply('Question-1',innerHTML);">0</a></li>
+                      <li><a onclick="submitReply('Question-1',innerHTML);">1</a></li>
+                      <li><a onclick="submitReply('Question-1',innerHTML);">3</a></li>
+                      <li><a onclick="submitReply('Question-1',innerHTML);">5</a></li>
+                      <li><a onclick="submitReply('Question-1',innerHTML);">more</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="Question-2">
+                    <h2>Which meal has a smaller carbon footprint?</h2>
+                    <ul>
+                        <li><a onclick="submitReply('Question-2',innerHTML);">Chichen Tikka Masala</a></li>
+                        <li><a onclick="submitReply('Question-2',innerHTML);">Lamb Curry</a></li>
+                      </ul>
+                  </div>
+                  <div id="Question-3">
+                      <h2>How many chickens suicide per year?</h2>
+                      <ul>
+                          <li><a onclick="submitReply('Question-3',innerHTML);">0</a></li>
+                          <li><a onclick="submitReply('Question-3',innerHTML);">1</a></li>
+                          <li><a onclick="submitReply('Question-3',innerHTML);">3</a></li>
+                          <li><a onclick="submitReply('Question-3',innerHTML);">5</a></li>
+                          <li><a onclick="submitReply('Question-3',innerHTML);">more</a></li>
+                        </ul>
+                    </div>
+                    <div id="Question-4">
+                        <h2>How much do you love meat?</h2>
+                        <ul>
+                            <li><a onclick="submitReply('Question-4',innerHTML);">I dont like meat.</a></li>
+                            <li><a onclick="submitReply('Question-4',innerHTML);">A little.</a></li>
+                            <li><a onclick="submitReply('Question-4',innerHTML);">A lot.</a></li>
+                            <li><a onclick="submitReply('Question-4',innerHTML);">I love it!</a></li>
+                          </ul>
+                      </div>
+                      <div id="Question-5">
+                          <h2>Egg laying chickens </h2>
+                          <ul>
+                              <li><a onclick="submitReply('Question-5',innerHTML);">0</a></li>
+                              <li><a onclick="submitReply('Question-5',innerHTML);">1</a></li>
+                              <li><a onclick="submitReply('Question-5',innerHTML);">3</a></li>
+                              <li><a onclick="submitReply('Question-5',innerHTML);">5</a></li>
+                              <li><a onclick="submitReply('Question-5',innerHTML);">more</a></li>
+                           </ul>
+                      </div>
+                      <div id="Question-6">
+                        <h2>Question6 </h2>
+                        <ul>
+                            <li><a onclick="submitReply('Question-6',innerHTML);">0</a></li>
+                            <li><a onclick="submitReply('Question-6',innerHTML);">1</a></li>
+                            <li><a onclick="submitReply('Question-6',innerHTML);">3</a></li>
+                            <li><a onclick="submitReply('Question-6',innerHTML);">5</a></li>
+                            <li><a onclick="submitReply('Question-6',innerHTML);">more</a></li>
+                         </ul>
+                    </div>
+                    <div id="Question-7">
+                      <h2>Question7 </h2>
+                      <ul>
+                          <li><a onclick="submitReply('Question-7',innerHTML);">0</a></li>
+                          <li><a onclick="submitReply('Question-7',innerHTML);">1</a></li>
+                          <li><a onclick="submitReply('Question-7',innerHTML);">3</a></li>
+                          <li><a onclick="submitReply('Question-7',innerHTML);">5</a></li>
+                          <li><a onclick="submitReply('Question-7',innerHTML);" >more</a></li>
+                       </ul>
+                  </div>
+                  <div id="Question-8">
+                    <h2>Question8 </h2>
+                    <ul>
+                        <li><a onclick="submitReply('Question-8',innerHTML);">0</a></li>
+                        <li><a onclick="submitReply('Question-8',innerHTML);">1</a></li>
+                        <li><a onclick="submitReply('Question-8',innerHTML);">3</a></li>
+                        <li><a onclick="submitReply('Question-8',innerHTML);">5</a></li>
+                        <li><a onclick="submitReply('Question-8',innerHTML);">more</a></li>
+                     </ul>
+                </div>
+
+                      <div id="Give_Score">
+                        <h2>Verdict: <span id="myScore"></span></h2>
+                      </div>
+                   
+
+
+          <div id="bottomRight">
+            <button id="backToMenuFromQuiz" onclick="clickHandler(this.id);">Go Back</button>
+          </div>
+        </div>
+
+        <div id="toggle-facts">
+          <!-- <h1>Lamb facts!</h1> -->
+          <div id="facts-body"> 
+            <h3>Carbon footprint : <div id="highlight">To make one kilogram of lamb we produce 39.2kg of Co2</div></h3>
+            
+            <h3>That is equivalent with driving for: <div id="highlight">146 km</div></h3>
+          
+            <h3>Emission ranking:<div id="highlight">Did you know that lamb scores first at the 
+              lifecycle greenhouse gas emissions charts.
+            </div></h3>
+           
+              
+
+            </div>
+          <div id="bottomRight">
+            <button id="backToMenu" onclick="clickHandler(this.id);">Go Back</button>
+          </div>
+        </div>
+
+
+     </div>
+
+  </body>
+</html>
+
+

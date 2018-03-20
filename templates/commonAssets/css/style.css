@@ -1,0 +1,196 @@
+
+#highlight{
+    background-color: #ccc;
+    font-size: 0.8em;
+    padding-left: 20px;
+}
+#diquestion-list-div {
+    width: 20px;
+  }
+  h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+  }
+
+  h2 {
+    font-family: 'Gloria Hallelujah', cursive;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+  }
+  h3 {
+    font-family: 'Gloria Hallelujah', cursive;
+    margin: 0;
+    padding-left: 10px;
+    font-size: 1.2em;
+  }
+   
+  ul {
+    list-style-type: none;
+    width:500px;
+    margin: 0;
+    padding: 0;
+    padding-left: 50px;
+    padding-top:10px;
+    padding-bottom:30px;
+  }
+   
+  li {
+    font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+    border-bottom: 3px solid #ccc;
+  }
+   
+  li:last-child {
+    border: none;
+  }
+   
+  li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: 500px;
+   
+    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+  }
+   
+  li a:hover {
+    font-size: 30px;
+    background: #f6f6f6;
+  }
+
+#quiz-spacer{
+    width:100%;
+    height:30px;
+}
+
+#main-body{
+    width: 100%;
+    height: 700px;
+
+}
+#tite{
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    font-size: 3em;
+    padding-top:10px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+#menu {
+    width:100%;
+    height: 100px;
+    display: block;
+ 
+}
+#quiz{
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 30px;
+    font-family: 'Gloria Hallelujah', cursive;
+    display: block;
+}
+#TakeQuizText:hover{
+    background-color: lightgray;
+}
+#facts{
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 30px;
+    font-family: 'Gloria Hallelujah', cursive;
+    display: block;
+}
+#GetFactsText:hover{
+    background-color: lightgray;
+}
+#render{
+    height:540px;
+    width:100%;
+    align-items: center;
+    display: block;
+}
+#canvas{
+    width:100%;
+    height:100%;
+}
+#toggle-menu {
+    display:block;
+}
+#toggle-quiz{
+    display:none;
+    width:100%;
+    height:350px;
+    position: relative;
+}
+#toggle-facts{
+    display:none;
+    width:100%;
+    height:690px;
+    position: relative;
+}
+
+#facts-body{
+    padding-left:50px;
+}
+
+button{
+    background-color: #555555; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#bottomRight{
+    right: 0;
+    padding-top:20px;
+    position: absolute;
+}
+
+
+#Question-1{
+    display:block;
+}
+#Question-2{
+    display:none;
+}
+#Question-3{
+    display:none;
+}
+#Question-4{
+    display:none;
+}
+#Question-5{
+    display:none;
+}
+#Question-6{
+    display:none;
+}
+#Question-7{
+    display:none;
+}
+#Question-8{
+    display:none;
+}
+#Give_Score{
+    display:none;
+}
+
+#myScore{
+    color:green;
+}
