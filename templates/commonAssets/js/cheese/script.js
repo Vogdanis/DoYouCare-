@@ -61,25 +61,25 @@ function ShowDiv(triggerDiv) {
         document.getElementById("toggle-facts").style.display = "none";
         document.getElementById("toggle-quiz").style.display = "none";
         document.getElementById("Question-1").style.display = "none";
-        document.getElementById("Question-2").style.display = "none";
-        document.getElementById("Question-3").style.display = "none";
         document.getElementById("Question-4").style.display = "none";
         document.getElementById("Question-5").style.display = "none";
+        document.getElementById("Question-6").style.display = "none";
+        document.getElementById("Question-7").style.display = "none";
         document.getElementById("Give_Score").style.display = "none";
         document.getElementById("toggle-menu").style.display = "Block";
     } 
     if(triggerDiv === "Question-1"){
         document.getElementById("Question-1").style.display = "none";
-        document.getElementById("Question-2").style.display = "Block";
-    }
-    if(triggerDiv === "Question-2"){
-        document.getElementById("Question-2").style.display = "none";
-        document.getElementById("Question-3").style.display = "Block";
-    }
-    if(triggerDiv === "Question-3"){
-        document.getElementById("Question-3").style.display = "none";
         document.getElementById("Question-4").style.display = "Block";
     }
+    // if(triggerDiv === "Question-2"){
+    //     document.getElementById("Question-2").style.display = "none";
+    //     document.getElementById("Question-3").style.display = "Block";
+    // }
+    // if(triggerDiv === "Question-3"){
+    //     document.getElementById("Question-3").style.display = "none";
+    //     document.getElementById("Question-4").style.display = "Block";
+    // }
     if(triggerDiv === "Question-4"){
         document.getElementById("Question-4").style.display = "none";
         document.getElementById("Question-5").style.display = "Block";
@@ -95,14 +95,14 @@ function ShowDiv(triggerDiv) {
     }
     if(triggerDiv === "Question-7"){
         document.getElementById("Question-7").style.display = "none";
-        document.getElementById("Question-8").style.display = "Block";
-    }
-    if(triggerDiv === "Question-8"){
-        document.getElementById("Question-8").style.display = "none";
         document.getElementById("Give_Score").style.display = "Block";
     }
+    // if(triggerDiv === "Question-8"){
+    //     document.getElementById("Question-8").style.display = "none";
+    //     document.getElementById("Give_Score").style.display = "Block";
+    // }
     if(triggerDiv === "Give_Score"){
-        document.getElementById("Question-8").style.display = "none";
+        document.getElementById("Question-7").style.display = "none";
     }
 
 }

@@ -35,9 +35,9 @@ function clickHandler(clicked_id){
     if(clicked_id === "Question-7"){
         ShowDiv(clicked_id);
     }
-    if(clicked_id === "Question-8"){
-        ShowDiv(clicked_id);
-    }
+    // if(clicked_id === "Question-8"){
+    //     ShowDiv(clicked_id);
+    // }
 }
 
 
@@ -95,14 +95,14 @@ function ShowDiv(triggerDiv) {
     }
     if(triggerDiv === "Question-7"){
         document.getElementById("Question-7").style.display = "none";
-        document.getElementById("Question-8").style.display = "Block";
-    }
-    if(triggerDiv === "Question-8"){
-        document.getElementById("Question-8").style.display = "none";
         document.getElementById("Give_Score").style.display = "Block";
     }
+    // if(triggerDiv === "Question-8"){
+    //     document.getElementById("Question-8").style.display = "none";
+    //     document.getElementById("Give_Score").style.display = "Block";
+    // }
     if(triggerDiv === "Give_Score"){
-        document.getElementById("Question-8").style.display = "none";
+        document.getElementById("Question-7").style.display = "none";
     }
 
 }

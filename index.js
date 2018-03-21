@@ -2,14 +2,15 @@ const express = require('express')
 const app = express()
 var path = require('path');
 
+
 //app.use(express.static(path.join(__dirname, 'NewArJs')));
 //app.use(express.static(path.join(__dirname, 'InstaScanQRcode')));
 //app.use(express.static(path.join(__dirname, '/templates/ChickenPageWebGL')));
 app.use(express.static(path.join(__dirname, '/templates/commonAssets')));
 app.get('/', function(req, res) {
-    //res.sendFile(path.join(__dirname + '/InstaScanQRcode/index.html'));
+    res.sendFile(path.join(__dirname + '/InstaScanQRcode/index.html'));
     //res.sendFile(path.join(__dirname + '/TestMarkers/index.html'));
-    res.sendFile(path.join(__dirname + '/NewArJs/index.html'));
+    //res.sendFile(path.join(__dirname + '/NewArJs/index.html'));
     //res.sendFile(path.join(__dirname + '/templates/ChickenPageWebGL/chickenPageGL.html'));
     //res.sendFile(path.join(__dirname + '/templates/ChickenPageWebGL/chickenPageGL.html'));
 

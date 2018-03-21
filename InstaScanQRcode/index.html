@@ -5,7 +5,6 @@
     <script type="text/javascript" src="instascan.min.js"></script>
   </head>
   <body>
-      <h1>hey</h1>
     <video id="preview"></video>
     <script type="text/javascript">
       let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
@@ -13,8 +12,6 @@
         console.log(content);
       });
       Instascan.Camera.getCameras().then(function (cameras) {
-        var replaceText = document.getElementById("dump_cameras");
-        replaceText.innerHTML = cameras.length;
         if (cameras.length > 0) {
           scanner.start(cameras[0]);
         } else {
@@ -23,11 +20,6 @@
       }).catch(function (e) {
         console.error(e);
       });
-    </script>
-    <h2 id="dump_cameras">yo</h2>
-    <script>
-    
-        
     </script>
   </body>
 </html>

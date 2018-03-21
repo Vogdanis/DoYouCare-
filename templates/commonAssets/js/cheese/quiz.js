@@ -11,8 +11,8 @@ function submitReply(question,value){
     if(question === "Question-4"){ answer4=value;}
     if(question === "Question-5"){ answer5=value;}
     if(question === "Question-6"){ answer6=value;}
-    if(question === "Question-7"){ answer7=value;}
-    if(question === "Question-8"){ answer8=value;printAnswers();evaluateAnswers();}
+    if(question === "Question-7"){ answer7=value;printAnswers();evaluateAnswers();}
+    //if(question === "Question-8"){ answer8=value;}
 }
 function printAnswers(){
     console.log("Question1 answer was = " + answer1);
@@ -26,146 +26,84 @@ function printAnswers(){
 }
 
 function evaluateAnswers(){
-    var totalScore;
+    var totalScore = 0;
+    var unitScore = 5;
+    var numOfQuestions = 5;
     ////Question 1
     if(answer1 === "0"){
-        totalScore =+ 0;
+        totalScore += unitScore;
+        console.log(totalScore);
     }
     if(answer1 === "1"){
-        totalScore =+ 1;
+        totalScore += unitScore * 3 / 4;
+        console.log(totalScore);
     }
     if(answer1 === "3"){
-        totalScore =+ 3;
+        totalScore += unitScore * 2 / 4;
+        console.log(totalScore);
     }
     if(answer1 === "5"){
-        totalScore =+ 5;
+        totalScore += unitScore * 1 / 4;
+        console.log(totalScore);
     }
     if(answer1 === "more"){
-        totalScore =+ 10;
+        totalScore += 0;
+        console.log(totalScore);
     }
     ////Question 2
-    if(answer2 === "Chichen Tikka Masala"){
-        totalScore = totalScore + 0;
-    }
-    if(answer2 === "Lamb Curry"){
-        totalScore = totalScore + 10;
-    }
-     ////Question 3
-     if(answer3 === "0"){
-        totalScore = totalScore + 0;
-    }
-    if(answer3 === "1"){
-        totalScore = totalScore + 1;
-    }
-    if(answer3 === "3"){
-        totalScore = totalScore + 3;
-    }
-    if(answer3 === "5"){
-        totalScore = totalScore + 5;
-    }
-    if(answer3 === "more"){
-        totalScore = totalScore + 10;
-    }
+
+    // if(answer2 === "960 Million"){
+    //     totalScore += unitScore;
+    //     console.log(totalScore);
+    // }
+    //  ////Question 3
+    //  if(answer3 === "47 days"){
+    //     totalScore += unitScore;
+    //     console.log(totalScore);
+    // }
 
     ////Question 4
-    if(answer4 === "0"){
-        totalScore = totalScore + 0;
+    if(answer4 === "3000 liters."){
+        totalScore += unitScore;
+        console.log(totalScore);
     }
-    if(answer4 === "1"){
-        totalScore = totalScore + 1;
-    }
-    if(answer4 === "3"){
-        totalScore = totalScore + 3;
-    }
-    if(answer4 === "5"){
-        totalScore = totalScore + 5;
-    }
-    if(answer4 === "more"){
-        totalScore = totalScore + 10;
-    }
+   
 
     ////Question 5
-    if(answer5 === "0"){
-        totalScore = totalScore + 0;
+    if(answer5 === "50km"){
+        totalScore += unitScore;
+        console.log(totalScore);
     }
-    if(answer5 === "1"){
-        totalScore = totalScore + 1;
-    }
-    if(answer5 === "3"){
-        totalScore = totalScore + 3;
-    }
-    if(answer5 === "5"){
-        totalScore = totalScore + 5;
-    }
-    if(answer5 === "more"){
-        totalScore = totalScore + 10;
-    }
+   
 
     ////Question 6
-    if(answer6 === "0"){
-        totalScore = totalScore + 0;
+    if(answer6 === "1kg of cheese"){
+        totalScore += unitScore;
+        console.log(totalScore);
     }
-    if(answer6 === "1"){
-        totalScore = totalScore + 1;
-    }
-    if(answer6 === "3"){
-        totalScore = totalScore + 3;
-    }
-    if(answer6 === "5"){
-        totalScore = totalScore + 5;
-    }
-    if(answer6 === "more"){
-        totalScore = totalScore + 10;
-    }
+ 
 
     ////Question 7
-    if(answer7 === "0"){
-        totalScore = totalScore + 0;
-    }
-    if(answer7 === "1"){
-        totalScore = totalScore + 1;
-    }
-    if(answer7 === "3"){
-        totalScore = totalScore + 3;
-    }
-    if(answer7 === "5"){
-        totalScore = totalScore + 5;
-    }
-    if(answer7 === "more"){
-        totalScore = totalScore + 10;
-    }
-
-
-    ////Question 8
-    if(answer8 === "0"){
-        totalScore = totalScore + 0;
-    }
-    if(answer8 === "1"){
-        totalScore = totalScore + 1;
-    }
-    if(answer8 === "3"){
-        totalScore = totalScore + 3;
-    }
-    if(answer8 === "5"){
-        totalScore = totalScore + 5;
-    }
-    if(answer8 === "more"){
-        totalScore = totalScore + 10;
+    if(answer7 === "Lamb curry"){
+        totalScore += unitScore;
+        console.log(totalScore);
     }
 
 
 
-    if(totalScore <= 5){
-        console.log("You're a pro!");
-        displayAnswer = "You're a pro!";
+
+    if(totalScore <= (unitScore * (numOfQuestions * 1 / 3))){
+        console.log("You know jack shit about chicken!");
+        displayAnswer = "You know jack shit about cheese!";
+    
     }
-    if(totalScore > 5 && totalScore <= 10){
+    if(totalScore > (unitScore * (numOfQuestions * 1 / 3)) && totalScore <= (unitScore * (numOfQuestions * 2 / 3))){
         console.log("You need to study!");
         displayAnswer = "You need to study!";
     }
-    if(totalScore > 10 && totalScore <= 100000){
-        console.log("You know jack shit about chicken!");
-        displayAnswer = "You know jack shit about chicken!";
+    if(totalScore > (unitScore * (numOfQuestions * 2 / 3)) && totalScore <= 100000){
+        console.log("You're a pro!");
+        displayAnswer = "You're a pro!";
     }
 
 

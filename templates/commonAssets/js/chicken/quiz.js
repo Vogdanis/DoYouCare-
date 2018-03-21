@@ -11,8 +11,8 @@ function submitReply(question,value){
     if(question === "Question-4"){ answer4=value;}
     if(question === "Question-5"){ answer5=value;}
     if(question === "Question-6"){ answer6=value;}
-    if(question === "Question-7"){ answer7=value;}
-    if(question === "Question-8"){ answer8=value;printAnswers();evaluateAnswers();}
+    if(question === "Question-7"){ answer7=value;printAnswers();evaluateAnswers();}
+   //if(question === "Question-8"){ answer8=value;}
 }
 function printAnswers(){
     console.log("Question1 answer was = " + answer1);
@@ -77,11 +77,11 @@ function evaluateAnswers(){
    
 
     ////Question 6
-    if(answer6 === "1kg of chicken"){
+    if(answer6 === "1kg of cheese"){
         totalScore += unitScore;
         console.log(totalScore);
     }
-    if(answer6 === "1kg of cheese"){
+    if(answer6 === "1kg of chicken"){
         totalScore += 0;
         console.log(totalScore);
     }
@@ -98,15 +98,15 @@ function evaluateAnswers(){
     }
 
 
-    ////Question 8
-    if(answer8 === "Chicken tikka masala"){
-        totalScore += 0;
-        console.log(totalScore);
-    }
-    if(answer8 === "Lamb curry"){
-        totalScore += unitScore;
-        console.log("Hello");
-    }
+    // ////Question 8
+    // if(answer8 === "Chicken tikka masala"){
+    //     totalScore += 0;
+    //     console.log(totalScore);
+    // }
+    // if(answer8 === "Lamb curry"){
+    //     totalScore += unitScore;
+    //     console.log("Hello");
+    // }
 
 
 
